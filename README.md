@@ -15,4 +15,15 @@ Complete these following steps:
 #### _How To Play Escape_
 
 1. You can control the character by using the arrow keys on your keyboard.
-2. Get your character to the exit point 
+2. Move and go through the obsticles
+3. Get your character to the exit point
+
+### *Main Credits*
+
+1.Yyenh - readme writer and coordinator
+
+2.Vaishnavy12 - graphics research and source scouter
+
+3.Harshini1030 - main coder and game checker 
+
+we helped each other out through the difficult process
