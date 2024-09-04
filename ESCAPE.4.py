@@ -39,7 +39,7 @@ blue = (0, 0, 255)
 
 #load images
 sun_img = pygame.image.load('sun3.png')
-bg_img = pygame.image.load('sky (1).png')
+bg_img = pygame.image.load('sky.png')
 restart_img = pygame.image.load('restart_btn.png')
 start_img = pygame.image.load('start_btn.png')
 exit_img = pygame.image.load('exit_btn.png')
@@ -51,9 +51,6 @@ coin_fx = pygame.mixer.Sound('coin.wav')
 coin_fx.set_volume(0.5)
 jump_fx = pygame.mixer.Sound('jump.wav')
 jump_fx.set_volume(0.5)
-game_over_fx = pygame.mixer.Sound('game_over.wav')
-game_over_fx.set_volume(0.5)
-
 
 def draw_text(text, font, text_col, x, y):
 	img = font.render(text, True, text_col)
@@ -186,12 +183,10 @@ class Player():
 			#check for collision with enemies
 			if pygame.sprite.spritecollide(self, blob_group, False):
 				game_over = -1
-				game_over_fx.play()
 
 			#check for collision with lava
 			if pygame.sprite.spritecollide(self, lava_group, False):
 				game_over = -1
-				game_over_fx.play()
 
 			#check for collision with exit
 			if pygame.sprite.spritecollide(self, exit_group, False):
@@ -226,7 +221,6 @@ class Player():
 
 		elif game_over == -1:
 			self.image = self.dead_image
-			draw_text('GAME OVER!', font, blue, (screen_width // 2) - 200, screen_height // 2)
 			if self.rect.y > 200:
 				self.rect.y -= 5
 
@@ -242,7 +236,7 @@ class Player():
 		self.index = 0
 		self.counter = 0
 		for num in range(1, 5):
-			img_right = pygame.image.load(f'guy1.png')
+			img_right = pygame.image.load(f'guy3.png')
 			img_right = pygame.transform.scale(img_right, (40, 80))
 			img_left = pygame.transform.flip(img_right, True, False)
 			self.images_right.append(img_right)
@@ -362,7 +356,7 @@ class Platform(pygame.sprite.Sprite):
 class Lava(pygame.sprite.Sprite):
 	def __init__(self, x, y):
 		pygame.sprite.Sprite.__init__(self)
-		img = pygame.image.load('lava (1).png')
+		img = pygame.image.load('lava.png')
 		self.image = pygame.transform.scale(img, (tile_size, tile_size // 2))
 		self.rect = self.image.get_rect()
 		self.rect.x = x
@@ -475,23 +469,14 @@ while run:
 		if game_over == -1:
 			if restart_button.draw():
 				world_data = []
-				world = reset_level(level)
+				player.reset(100, screen_height - 130)
 				game_over = 0
-				score = 0
 
 		#if player has completed the level
 		if game_over == 1:
-			#reset game and go to next level
-			level += 1
-			if level <= max_levels:
-				#reset level
-				world_data = []
-				world = reset_level(level)
-				game_over = 0
-			else:
-				draw_text('YOU WIN!', font, blue, (screen_width // 2) - 140, screen_height // 2)
-				if restart_button.draw():
-					level = 1
+			draw_text('YOU WIN!', font, blue, (screen_width // 2) - 140, screen_height // 2)
+			if restart_button.draw():
+					level = 0
 					#reset level
 					world_data = []
 					world = reset_level(level)
