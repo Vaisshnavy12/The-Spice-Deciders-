@@ -7,23 +7,24 @@ clock = pygame.time.Clock()
 fps = 60
 
 screen_width = 1000
-screen_height = 1000
+screen_height = 600
 
 screen = pygame.display.set_mode((screen_width, screen_height))
 pygame.display.set_caption('ESCAPE')
 
 #define game variables
-tile_size = 50
+tile_size = 50 
+title_size = str("ESCAPE")
 game_over = 0
 main_menu = True
 
 
 #load images
-sun_img = pygame.image.load('img/sun.sspng')
-bg_img = pygame.image.load('img/sky.png')
-restart_img = pygame.image.load('img/restart_btn.png')
-start_img = pygame.image.load('img/start_btn.png')
-exit_img = pygame.image.load('img/exit_btn.png')
+sun_img = pygame.image.load('sun.png')
+bg_img = pygame.image.load('background.jpg')
+restart_img = pygame.image.load('restart.png')
+start_img = pygame.image.load('play.jpg1')
+exit_img = pygame.image.load('exit.jpg.jpg')
 
 
 
@@ -161,12 +162,12 @@ class Player():
 		self.index = 0
 		self.counter = 0
 		for num in range(1, 5):
-			img_right = pygame.image.load(f'img/guy{num}.png')
+			img_right = pygame.image.load(f'cartoonboy.png')
 			img_right = pygame.transform.scale(img_right, (40, 80))
 			img_left = pygame.transform.flip(img_right, True, False)
 			self.images_right.append(img_right)
 			self.images_left.append(img_left)
-		self.dead_image = pygame.image.load('img/ghost.png')
+		self.dead_image = pygame.image.load('ghost.png')
 		self.image = self.images_right[self.index]
 		self.rect = self.image.get_rect()
 		self.rect.x = x
@@ -185,8 +186,8 @@ class World():
 		self.tile_list = []
 
 		#load images
-		dirt_img = pygame.image.load('img/dirt.png')
-		grass_img = pygame.image.load('img/grass.png')
+		dirt_img = pygame.image.load('grass.png')
+		grass_img = pygame.image.load('dirt.png')
 
 		row_count = 0
 		for row in data:
@@ -226,7 +227,7 @@ class World():
 class Enemy(pygame.sprite.Sprite):
 	def __init__(self, x, y):
 		pygame.sprite.Sprite.__init__(self)
-		self.image = pygame.image.load('img/blob.png')
+		self.image = pygame.image.load('blob.png')
 		self.rect = self.image.get_rect()
 		self.rect.x = x
 		self.rect.y = y
@@ -244,7 +245,7 @@ class Enemy(pygame.sprite.Sprite):
 class Lava(pygame.sprite.Sprite):
 	def __init__(self, x, y):
 		pygame.sprite.Sprite.__init__(self)
-		img = pygame.image.load('img/lava.png')
+		img = pygame.image.load('lava.png')
 		self.image = pygame.transform.scale(img, (tile_size, tile_size // 2))
 		self.rect = self.image.get_rect()
 		self.rect.x = x
@@ -296,7 +297,7 @@ while run:
 
 	clock.tick(fps)
 
-	screen.blit(bg_img, (0, 0))
+	screen.blit(bg_img, (0,0))
 	screen.blit(sun_img, (100, 100))
 
 	if main_menu == True:
@@ -320,6 +321,7 @@ while run:
 			if restart_button.draw():
 				player.reset(100, screen_height - 130)
 				game_over = 0
+				print ("GAME OVER")
 
 
 	for event in pygame.event.get():
