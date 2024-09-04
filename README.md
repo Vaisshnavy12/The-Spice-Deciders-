@@ -29,7 +29,8 @@ before being able to play this game, you will have to :
    
      conda install conda-forge::pygame
    
-4. download [Visual Studio Code](https://code.visualstudio.com/download)  
+4. download [Visual Studio Code](https://code.visualstudio.com/download)
+5. download the raw file at [ESCAPE.4.py](https://github.com/Vaisshnavy12/The-Spice-Deciders-/blob/main/ESCAPE.4.py)
 #### _How To Play Escape_
 
 1. You can control the character by using the arrow keys ⬅️ to move left, ➡️ to move right, and [space] to jump on your keyboard.
