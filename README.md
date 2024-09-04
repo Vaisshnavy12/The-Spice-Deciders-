@@ -24,8 +24,12 @@ Safe travels.
 before being able to play this game, you will have to :
 
 1. download/update python to its latest version in your device ---> [Windows](https://www.python.org/downloads/windows/) , [Linux/UNIX](https://www.python.org/downloads/source/) , [macOS](https://www.python.org/downloads/macos/) or [Other](https://www.python.org/download/other/)
-2. (simple and understandable)
-
+2. download [Anaconda](https://www.anaconda.com/download/success) or [Miniconda](https://docs.anaconda.com/miniconda/)
+3. After setting up Anaconda or Miniconda, install pygame in Anaconda and Miniconda by running:
+   
+     conda install conda-forge::pygame
+   
+4. download [Visual Studio Code](https://code.visualstudio.com/download)  
 #### _How To Play Escape_
 
 1. You can control the character by using the arrow keys ⬅️ to move left, ➡️ to move right, and [space] to jump on your keyboard.
