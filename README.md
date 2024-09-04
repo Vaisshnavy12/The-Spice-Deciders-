@@ -2,10 +2,10 @@
 ### *Introduction*
 This an adventure game (platformers) which is easy to use and play.
 
-**⚠️ This game is only suitable for devices which uses keyboard wich contains arrow keys**
+**⚠️ This game is only suitable for devices which uses keyboard which contains arrow keys**
 
 ### *Description*
-A game which works like Super Mario but easier level and no Piranha Plant.
+A game which works like Super Mario but easier level and no Piranha Plant. Made with inspiration from a classic puzzle game from 2009, Fireboy and Watergirl
 
 ### *Getting Started*
 Complete these following steps:
@@ -14,9 +14,8 @@ Complete these following steps:
 
 #### _How To Play Escape_
 
-1. You can control the character by using the arrow keys on your keyboard.
-2. Move and go through the obsticles
-3. Get your character to the exit point
+1. You can control the character by using the arrow keys ⬅️ to move left, ➡️ to move right, and [space] to jump on your keyboard.
+2. Move and go through the obsticles to get to the exit
 
 ### *Main Credits*
 
@@ -26,4 +25,4 @@ Complete these following steps:
 
 3.Harshini1030 - main coder and game checker 
 
-we helped each other out through the difficult process
+note: we helped each other out through the difficult process
