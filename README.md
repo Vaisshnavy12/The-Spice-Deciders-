@@ -44,7 +44,7 @@ before being able to play this game, you will have to :
 **Gaming screen** (after you press start)
 <img src="gaming screen.jpg">
 
-You can see a video demo att [Game Demo (video)](https://github.com/Vaisshnavy12/The-Spice-Deciders-/blob/main/Game%20Demo%20(video)https://github.com/Vaisshnavy12/The-Spice-Deciders-/blob/main/Game%20Demo%20(video))
+You can see a video demo att [Game Demo (video)](https://github.com/Vaisshnavy12/The-Spice-Deciders-/blob/main/Game%20Demo%20(video))
 ### *Main Credits*
 
 1.Yyenh - readme writer and coordinator
