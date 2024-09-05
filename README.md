@@ -38,7 +38,10 @@ before being able to play this game, you will have to :
 2. Move and go through the obsticles to reach the exit.
 
 ### *What You Should See After Running The Game In VSCode*
+**Starting screen**
 <img src="starting screen.jpg">
+
+**Gaming screen** (after you press start)
 <img src="gaming screen.jpg">
 
 ### *Main Credits*
