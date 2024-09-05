@@ -426,7 +426,7 @@ world = World(world_data)
 
 
 #create buttons
-restart_button = Button(screen_width // 2 - 50, screen_height // 2 + 100, restart_img)
+restart_button = Button(screen_width // 2 - 70, screen_height // 2 + 60, restart_img)
 start_button = Button(screen_width // 2 - 350, screen_height // 2, start_img)
 exit_button = Button(screen_width // 2 + 150, screen_height // 2, exit_img)
 
