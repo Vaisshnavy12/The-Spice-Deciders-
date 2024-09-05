@@ -37,6 +37,10 @@ before being able to play this game, you will have to :
 1. You can control the character by using the arrow keys ⬅️ to move left, ➡️ to move right, and [space] to jump on your keyboard.
 2. Move and go through the obsticles to reach the exit.
 
+### *What You Should See After Running The Game In VSCode*
+<img src="starting screen.jpg">
+<img src="gaming screen.jpg">
+
 ### *Main Credits*
 
 1.Yyenh - readme writer and coordinator
